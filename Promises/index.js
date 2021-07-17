@@ -32,3 +32,13 @@ const p = new Promise((resolve, reject) => {
   .then(function acao2 (res) { console.log(`${res} da ação 2`); return res; })
   .then(function acao3 (res) { console.log(`${res} da ação 3`); return res; })
   .catch(function erro (rej) { console.error(rej) })
+
+//====== Usando finally ======//
+
+const p = new Promise((resolve, reject) => {
+    if (Math.random() > 0.5) resolve('Fluxo')
+    reject('Erro')
+})
+
+p.then(console.log)
+.catch(console.error).finally(() => console.log('Sempre sou executado'));
