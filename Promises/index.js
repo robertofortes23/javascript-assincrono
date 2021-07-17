@@ -42,3 +42,11 @@ const p = new Promise((resolve, reject) => {
 
 p.then(console.log)
 .catch(console.error).finally(() => console.log('Sempre sou executado'));
+
+//====== Promises de promises ======//
+
+fetch('https://umsitequalquer.com.br/')
+  .then((response) => {
+    if (status === 200) return fetch('http://outrositequalquer.com.br')
+  })
+  .then((response) => console.log(response.statusText))
