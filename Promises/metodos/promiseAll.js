@@ -18,3 +18,5 @@ let pB = new Promise((resolve, reject) => time('B', 300, resolve));
 let pC = new Promise((resolve, reject) => time('C', 800, resolve));
 let pD = new Promise((resolve, reject) => time('D', 400, resolve));
 let pE = new Promise((resolve, reject) => time('E', 1000, resolve));
+
+//A promise.all() esperou todas as promises serem resolvidas para retornar.
