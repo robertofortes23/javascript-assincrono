@@ -17,3 +17,11 @@ p.then(function(v) {
   console.log(v[0]); // 1
 });
 
+//Resolvendo outra promise
+
+var original = Promise.resolve(true);
+var cast = Promise.resolve(original);
+cast.then(function(v) {
+  console.log(v); // true
+});
+
