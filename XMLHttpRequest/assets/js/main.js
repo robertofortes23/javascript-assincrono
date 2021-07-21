@@ -39,3 +39,8 @@ async function carregaPagina(el) {
     console.log(e);
   }
 }
+
+function carregaResultado(response) {
+  const resultado = document.querySelector('.resultado');
+  resultado.innerHTML = response;
+}
