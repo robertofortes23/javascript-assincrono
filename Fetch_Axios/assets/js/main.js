@@ -5,9 +5,6 @@ fetch('pessoas.json')
 // axios('pessoas.json')
 //   .then(resposta => carregaElementosNaPagina(resposta.data));
 
-// axios('pessoas.json')
-//   .then(resposta => carregaElementosNaPagina(resposta.data));
-
 function carregaElementosNaPagina(json) {
   const table = document.createElement('table');
 
